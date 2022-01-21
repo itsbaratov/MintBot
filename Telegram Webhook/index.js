@@ -5,7 +5,7 @@ const request = require('request');
 
 
 if("text" in req.body.message && req.body.message.text == "/start"){
-     const url = "https://api.telegram.org/bot<token>/sendMessage?chat_id="+req.body.message.chat.id+"&text=Send the image/video you want minted and add a caption in the following format. \n\nethAddress : title : description \n\nENS domains are valid.";
+     const url = "https://api.telegram.org/bot<5290786943:AAH5ZR-RW5VoKlBY1uYkrwKKY6vL5adIlAw>/sendMessage?chat_id="+req.body.message.chat.id+"&text=Send the image/video you want minted and add a caption in the following format. \n\nethAddress : title : description \n\nENS domains are valid.";
      request.get(url);
 }
 
@@ -16,7 +16,7 @@ else if ("photo" in req.body.message){
           var file_id = photo[photo.length - 1].file_id;
           var match = caption.match(/\b((?!=|\:|\:).)+(.)\b/g);
           if(match.length != 3){
-               const url = "https://api.telegram.org/bot<token>/sendMessage?chat_id="+req.body.message.chat.id+"&text=Invalid caption format";
+               const url = "https://api.telegram.org/bot<5290786943:AAH5ZR-RW5VoKlBY1uYkrwKKY6vL5adIlAw>/sendMessage?chat_id="+req.body.message.chat.id+"&text=Invalid caption format";
                request.get(url);
           }
           else{
@@ -29,18 +29,18 @@ else if ("photo" in req.body.message){
      }
      else
      {
-     const url = "https://api.telegram.org/bot<token>/sendMessage?chat_id="+req.body.message.chat.id+"&text=Caption missing";
+     const url = "https://api.telegram.org/bot<5290786943:AAH5ZR-RW5VoKlBY1uYkrwKKY6vL5adIlAw>/sendMessage?chat_id="+req.body.message.chat.id+"&text=Caption missing";
      request.get(url);
      }
 }
 
 else if ("video" in req.body.message){
-      const url = "https://api.telegram.org/bot<token>/sendMessage?chat_id="+req.body.message.chat.id+"&text=Minting of videos is not supported at the moment.";
+      const url = "https://api.telegram.org/bot<5290786943:AAH5ZR-RW5VoKlBY1uYkrwKKY6vL5adIlAw>/sendMessage?chat_id="+req.body.message.chat.id+"&text=Minting of videos is not supported at the moment.";
       request.get(url);
 }
 
 else {
-     const url = "https://api.telegram.org/bot<token>/sendMessage?chat_id="+req.body.message.chat.id+"&text=Missing media. Send the image/video you want minted and add a caption in the following format. \n\nethAddress : title : description \n\nENS domains are valid.";
+     const url = "https://api.telegram.org/bot<5290786943:AAH5ZR-RW5VoKlBY1uYkrwKKY6vL5adIlAw>/sendMessage?chat_id="+req.body.message.chat.id+"&text=Missing media. Send the image/video you want minted and add a caption in the following format. \n\nethAddress : title : description \n\nENS domains are valid.";
      request.get(url);
 }
 
